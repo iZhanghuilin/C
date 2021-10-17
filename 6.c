@@ -1,10 +1,15 @@
-#include <stdio.h>
-
-main()
+#include<stdio.h>
+int main()
 {
-	float a,b;
-	
-	scanf("%f %f",&a,&b);
-	
-	printf("At %.2f megabits per second, a file of %.2f megabytes\ndownloads in %.2f seconds.",a,b,b * 8 / a);
- } 
+ int a;
+ long b=0,c=1;
+ scanf("%d",&a);
+ while(a)
+ {
+ 	b=a%2*c+b;
+ 	a=a/2;
+ 	c=c*10;
+ }
+ printf("%ld",b);
+}
+

@@ -1,8 +1,21 @@
 #include <stdio.h>
 
 int main()
-{
-	float n;
-	scanf("%f",&n);
-	printf("%f\n%e\n%a\n",n,n,n);
- } 
+
+{  char ch;
+
+ch='z';
+ 
+
+   while (ch !=96)
+
+   {
+   
+   printf("%c  ",ch);
+
+      ch--; 
+
+   }
+
+}
+

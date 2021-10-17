@@ -1,27 +1,30 @@
 #include <stdio.h>
-#include <string.h>
+int main()
 
-main() 
 {
-	char str1[10],str2[10];
-	int len1,len2;
-	
-	scanf("%s",&str1);
-	
-	scanf("%s",&str2);
-	
-	len1 = strlen(str1);
-	
-	len2 = strlen(str2); 
-	
-	printf("%s %s\n",str2,str1);
-	
-	printf("%*d %*d\n",len2,len2,len1,len1);
-	
-	printf("%s %s\n",str2,str1);
-	
-	
-	printf("%-*d %-*d",len2,len2,len1,len1);
-	
-	
+
+       int a=2,  b=10, c=1, i ;
+
+       for(i = c; i<=2 * b; i+= a)
+
+       {
+
+              a = a + 2;
+
+               i = i + 1;
+
+               c = 2 * c;
+
+               if(a >= 10) break;
+
+               b = b - 3;
+
+       }
+
+       printf("i=%d, a=%d, b=%d, c=%d\n", i, a, b, c);
+
+       return 0;
+
 }
+
+

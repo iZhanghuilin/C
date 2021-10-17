@@ -1,12 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 
-main()
+int main()
 {
-	float h,i;
+	int p=0,s=0;
 	
-	scanf("%f",&i);
-	
-	h=i * 2.54;
-	
-	printf("%.2f",h);
+	while(p >= 0)
+	{
+		scanf("%d",&p);
+		if(p <= 60&&p >= 0)
+		{
+			s++;
+		
+		 } 
+		
+	}
+	printf("%d",s);
 }
