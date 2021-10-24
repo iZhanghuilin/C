@@ -1,19 +1,22 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-	int day,sum;
-	int a=0;
-	
-	scanf("%d",&day);
-	
-	while(a < day)
-	{
-		a++;
-	
-		sum += a;
-		
-	}
-	printf("%d",sum);
-	return 0;
+    int i,m,n=0;
+    for(i=1;i<=1000;i++)
+    {
+        if(i>=1&&i<=9) 
+		{
+		printf("%3d%c",i,' ',n++);
+		}
+        if(i>=10&&i<=99&&(i/10)==(i%10)) 
+		{
+		printf("%3d%c",i,' ',n++);
+		} 
+        if(i>=100&&i<=999&&(i/100)==(i%10)) {printf("%3d%c",i,' ',n++);
+		}
+        if(n==10) {printf("\n",n=0);
+		}
+        
+    }
 }
+

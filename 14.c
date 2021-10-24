@@ -1,15 +1,25 @@
-#include <stdio.h>
-
-
+#include<stdio.h>
+#include<math.h>
 int main()
 {
-	double tem,f;
-	while(scanf("%lf",&tem)==1)
-	{
-		
-		f = 1.8 * tem +32.0; 
-		printf("%.1lf ",f);
+    int x,i,n,j=0,k;
+    scanf("%d",&x);
+    int A[x];
+    for(i=pow(10,x-1);i<=pow(10,x)-1;i++)
+    {
+        for(n=1;n<=x;n++)
+        {
+            A[n]=fmod(i,pow(10,n))/pow(10,n-1);
+            
+        }
 
-	}
-	return 0;
+        for(k=1;k<=x;k++)
+        {
+            j=j+pow(A[k],x);
+
+        }
+        if(i==j) printf("%d\n",i);
+        j=0;
+    }
 }
+
