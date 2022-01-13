@@ -1,27 +1,45 @@
 #include <stdio.h>
-int main()
+void secret(char a[], char *p)
 {
-    int a,b,c,j,i;
-    char ch;
-    scanf("%c",&ch);
-    a=ch-'A'+1;//ÊäÈë×ÖÄ¸µÄÐòºÅ
-    for (b=1;b<=a;b++)
-        {
-            for(c=26;c>=b;c--) printf("%c",' ');
-            for(c=1;c<=b;c++) printf("%c",'A'+c-1);
-            j='A'+c-3;
-            for(c=j;c>='A';c--) printf ("%c",c);
-            printf("\n");
-        }
-        a=a-1;
-    for(b=a;b>=1;b--)
-        { for(c=26;c>=b;c--) printf("%c",' ');
-            for(c=1;c<=b;c++) printf("%c",'A'+c-1);
-            j='A'+c-3;
-            for(c=j;c>='A';c--) printf ("%c",c);
-            printf("\n");
-        }  
-        
-    return 0;
+	int i;
+	for(i=0;i<strlen(a);i++)
+	{
+		
+		if(a[i]>='a'&&a[i]<='w')
+		{
+			a[i]+=3;
+		}
+		else if(a[i]>='x'&&a[i]<='z'){
+			a[i]-=23;
+		}
+		*p++=a[i];
+	}
+			
+	}
+void open(char d[],char *q)
+{
+		int i;
+	for(i=0;i<strlen(d);i++)
+	{
+		
+		if(d[i]>='d'&&d[i]<='z')
+		{
+			d[i]-=3;
+		}
+		else if(d[i]>='a'&&d[i]<='c'){
+			d[i]+=23;
+		}
+		*q++=d[i];
+	}
 }
 
+int main()
+{
+	int a[50],b[50],c[50];
+	gets(a);
+	secret(a,b);
+	puts(b);
+	open(b,c);
+	puts(c);
+	
+}

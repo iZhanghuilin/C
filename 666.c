@@ -1,27 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
+#include <string.h> 
+
+void copy(char x[],char y[])
+{
+	int sx,i,j,sy;
+	sx=strlen(x);
+	sy=strlen(y);
+	for(i=sx;i<sx+sy;i++){
+		
+		for(j=0;j<sy;j++,i++){
+				x[i]=y[j];
+	}
+		}
+	
+}
+
+
 
 int main()
-
-{  int day,x1,x2;
-
-   day=0;
-
-   x1=1020;
-
-   while (x1!=0)
-
-   {
-
-      x2=x1/2-2;
-
-      x1=x2;
-
-      day++;
-
-   }
-
-   printf("day=%d\n",day);
-
-   return 0;
-
+{
+	char a[50],b[20];
+	gets(a);
+	gets(b);
+	copy(a,b);
+	puts(a);
 }
